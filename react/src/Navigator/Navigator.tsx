@@ -1,6 +1,6 @@
-// import React from 'react'
+import React from 'react'
 import { Redirect, Route, Switch, useRouteMatch } from 'react-router-dom'
-import { Flex } from '@catalogs/react'
+import { Flex } from '../Flex'
 import NavigationMenu from './NavigationMenu'
 import { Route as Route_t } from './types'
 
