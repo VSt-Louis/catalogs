@@ -15,3 +15,15 @@ Added 4 components
 Fixed paths in package.json
 Removed dependency: 'react-styles-hook'
 Added Changelog
+
+## 1.1.0
+
+Added 1 component
+
+- Navigator
+
+Exported property
+
+- fieldValidators
+
+from Form
