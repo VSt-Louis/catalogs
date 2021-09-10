@@ -9,7 +9,7 @@ type Props = {
 
 export const Spinner = ({ size, text }: Props) => {
   return (
-    <Flex hCenter h100 v100 vCenter>
+    <Flex hCenter h100 w100 vCenter>
       {text && <h2>{text}</h2>}
       <CircularProgress size={size || 30} />
     </Flex>
