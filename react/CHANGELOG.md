@@ -27,3 +27,7 @@ Exported property
 - fieldValidators
 
 from Form
+
+## 1.1.1
+
+Fix typo in Spinner
