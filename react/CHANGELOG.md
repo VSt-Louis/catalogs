@@ -35,3 +35,7 @@ Fix typo in Spinner
 ## 1.1.2
 
 Fix passed onChange prop to Form fields
+
+## 1.1.3
+
+Fix Form onChange: passing e.target.value instead of e
