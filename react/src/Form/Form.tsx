@@ -83,6 +83,7 @@ export default function Form({ fields, title, onSubmit }: Props) {
                     helperText={errorText}
                     variant='outlined'
                     required={f?.validators?.includes(fv.isRequired)}
+                    onChange={f.onChange}
                   />
                 </Grid>
               )
