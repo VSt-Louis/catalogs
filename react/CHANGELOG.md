@@ -27,3 +27,11 @@ Exported property
 - fieldValidators
 
 from Form
+
+## 1.1.1
+
+Fix typo in Spinner
+
+## 1.1.2
+
+Fix passed onChange prop to Form fields
