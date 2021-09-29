@@ -43,7 +43,7 @@ export default function Form({ fields, title, onSubmit }: Props) {
   }, [fields])
 
   return (
-    <Flex column>
+    <Flex>
       <Flex className={styles.title}>{title}</Flex>
       <form
         className={styles.form}
