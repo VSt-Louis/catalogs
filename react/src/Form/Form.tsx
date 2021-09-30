@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import Flex from '../Flex'
 import TextField from '@material-ui/core/TextField'
 import styles from './Form.module.scss'
@@ -30,21 +30,20 @@ type Props = {
 
 export default function Form({ fields, title, onSubmit }: Props) {
   const [showErrors, setShowErrors] = useState(false)
-  const fieldValidators = fields.reduce((fv, f) => {
-    if (typeof f === 'object' && f?.validators?.length) {
-      return { ...fv, [f.name]: f.validators }
-    }
-    return fv
-  }, {})
-
-  const validator = useRef(formValidator(fieldValidators))
-
-  // useEffect(() => {
-  //   validator.current = formValidator(fieldValidators)
-  // }, [])
+  const fieldValidators = (fields: (string | Field<any>)[]) =>
+    fields.reduce((fv, f) => {
+      if (typeof f === 'object' && f?.validators?.length) {
+        return { ...fv, [f.name]: f.validators }
+      }
+      return fv
+    }, {})
+  const validator = useRef(formValidator(fieldValidators(fields)))
+  useEffect(() => {
+    validator.current = formValidator(fieldValidators(fields))
+  }, [fields])
 
   return (
-    <Flex column>
+    <Flex>
       <Flex className={styles.title}>{title}</Flex>
       <form
         className={styles.form}
