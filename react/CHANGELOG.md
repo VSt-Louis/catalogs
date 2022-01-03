@@ -43,3 +43,7 @@ Fix Form onChange: passing e.target.value instead of e
 ## 1.1.4
 
 Fix fieldsValidator in Form
+
+## 1.1.5
+
+Added Store and minor fixes
