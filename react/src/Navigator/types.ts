@@ -1,7 +1,7 @@
 export type Route = {
   name: string
   path: string
-  component: (...a: any[]) => JSX.Element
+  component: React.ComponentType<any> | undefined
   hidden?: boolean
   hideNav?: boolean
   header?: {
