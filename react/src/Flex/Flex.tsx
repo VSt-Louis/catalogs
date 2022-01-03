@@ -26,8 +26,8 @@ export const Flex = React.forwardRef<HTMLDivElement, Props>(
     }
 
     const conditionalStyles = {
-      alignItems: (row ? vCenter : hCenter) ? 'center' : undefined,
-      justifyContent: (row ? hCenter : vCenter) ? 'center' : undefined,
+      alignItems: (row ? vCenter : hCenter) ? 'center' : 'flex-start',
+      justifyContent: (row ? hCenter : vCenter) ? 'center' : 'flex-start',
       flex: flex1 ? 1 : undefined,
       height: h100 ? '100%' : undefined,
       width: w100 ? '100%' : undefined,
