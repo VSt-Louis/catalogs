@@ -79,3 +79,7 @@ A simple spinner indicating that something is loading for example. It has `heigh
 
 - **size** : Optional, number indicating the size of the spinner in pixels
 - **text** : Optional, a string to be displayed in an h2 above the spinner
+
+##### Store
+
+An object that has a getter and a setter, and also supports being listened to and used as a state react hook. Useful to manage global data in a react application while requiring minimal effort to integrate with react's useState hook.

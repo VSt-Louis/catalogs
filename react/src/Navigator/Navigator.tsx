@@ -19,7 +19,7 @@ export default function Navigator({ routes, HeaderComponent }: Props) {
             <HeaderComponent {...(r.header || {})} />
             <Flex row h100>
               {!r.hideNav && <NavigationMenu baseUrl={url} routes={routes} />}
-              <r.component />
+              {r.component && <r.component />}
             </Flex>
           </Route>
         ))}
