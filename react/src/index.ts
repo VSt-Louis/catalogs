@@ -1,5 +1,5 @@
 export { Flex } from './Flex'
-export { Form, fieldValidators } from './Form'
+export { Form, fieldValidators, Field } from './Form'
 export { Modal } from './Modal'
 export { Spinner } from './Spinner'
 export { Navigator } from './Navigator'

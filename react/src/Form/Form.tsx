@@ -2,14 +2,10 @@ import React, { useState, useRef, useEffect } from 'react'
 import Flex from '../Flex'
 import TextField from '@material-ui/core/TextField'
 import styles from './Form.module.scss'
-import {
-  formValidator,
-  Validator,
-  fieldValidators as fv,
-} from './InputValidation'
+import { formValidator, Validator, fieldValidators as fv } from './InputValidation'
 import Grid from '@material-ui/core/Grid'
 
-type Field<InputType> = {
+export type Field<InputType> = {
   name: string
   title?: string
   multiline?: boolean
@@ -49,9 +45,7 @@ export default function Form({ fields, title, onSubmit }: Props) {
         className={styles.form}
         onSubmit={e => {
           e.preventDefault()
-          const formData = Object.fromEntries(
-            new FormData(e.target as HTMLFormElement).entries()
-          )
+          const formData = Object.fromEntries(new FormData(e.target as HTMLFormElement).entries())
           const errors = validator.current.checkErrors(formData)
           setShowErrors(true)
           if (!errors) {
@@ -81,10 +75,9 @@ export default function Form({ fields, title, onSubmit }: Props) {
                     defaultValue={f.defaultValue}
                     helperText={errorText}
                     variant='outlined'
-                    required={f?.validators?.includes(fv.isRequired)}
+                    required={f.isRequired || f?.validators?.includes(fv.isRequired)}
                     onChange={e => {
-                      typeof f.onChange === 'function' &&
-                        f.onChange(e.target.value)
+                      typeof f.onChange === 'function' && f.onChange(e.target.value)
                     }}
                   />
                 </Grid>

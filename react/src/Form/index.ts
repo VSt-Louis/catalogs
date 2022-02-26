@@ -1,4 +1,4 @@
-import Form from './Form'
+import Form, { Field } from './Form'
 import { fieldValidators } from './InputValidation'
-export { Form, fieldValidators }
+export { Form, fieldValidators, Field }
 export default Form
